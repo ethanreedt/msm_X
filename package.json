@@ -1,0 +1,22 @@
+{
+  "name": "msm",
+  "version": "1.1.0",
+  "description": "Multi-Store Management",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server/index.js",
+    "test": "jest --passWithNoTests"
+  },
+  "author": "Ethan Thompson",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.8.11"
+  },
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "supertest": "^4.0.2"
+  }
+}
