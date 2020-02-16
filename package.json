@@ -5,18 +5,25 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon server/index.js",
-    "test": "jest --passWithNoTests"
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch"
   },
   "author": "Ethan Thompson",
   "license": "ISC",
   "dependencies": {
+    "chart.js": "^2.9.3",
     "express": "^4.17.1",
-    "mongoose": "^5.8.11"
+    "moment": "^2.24.0",
+    "mongoose": "^5.8.11",
+    "vue-chartjs": "^3.5.0"
   },
   "devDependencies": {
     "cors": "^2.8.5",
     "jest": "^25.1.0",
     "nodemon": "^2.0.2",
     "supertest": "^4.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
   }
 }

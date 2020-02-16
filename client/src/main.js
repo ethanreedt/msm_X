@@ -12,16 +12,19 @@ Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = false
 
-import HomeComponent from './components/HomeComponent.vue'
+import ProfileComponent from './components/ProfileComponent.vue'
 import CreateComponent from './components/CreateComponent.vue'
 import EditComponent from './components/EditComponent.vue'
 import IndexComponent from './components/IndexComponent.vue'
+import ExpenseComponent from './components/ExpenseComponent.vue'
+import RevenueComponent from './components/RevenueComponent.vue'
+import StoreComponent from './components/StoreComponent.vue'
 
 const routes = [
   {
     name: 'home',
     path: '/',
-    component: HomeComponent
+    component: ProfileComponent
   },
   {
     name: 'create',
@@ -34,9 +37,24 @@ const routes = [
     component: IndexComponent
   },
   {
+    name: 'store',
+    path: '/store/:id',
+    component: StoreComponent
+  },
+  {
     name: 'edit',
     path: '/edit/:id',
     component: EditComponent
+  },
+  {
+    name: 'reportExpense',
+    path: '/report_expense/:id?',
+    component: ExpenseComponent
+  },
+  {
+    name: 'reportRevenue',
+    path: '/report_revenue/:id?',
+    component: RevenueComponent
   }
 ];
 

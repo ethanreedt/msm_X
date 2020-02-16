@@ -4,16 +4,14 @@
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <router-link to="/" class="nav-link">Home</router-link>
-          </li>
-          <li class="nav-item">
-            <router-link to="/create" class="nav-link">Create Store</router-link>
+            <router-link to="/" class="nav-link">Profile</router-link>
           </li>
           <li class="nav-item">
             <router-link to="/stores" class="nav-link">Stores</router-link>
           </li>
         </ul>
       </nav><br />
+      
       <router-view></router-view>
     </div>
   </div>

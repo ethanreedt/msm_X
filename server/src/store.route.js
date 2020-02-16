@@ -5,12 +5,10 @@ let Store = require('./store.model');
 
 router.get('/', (req, res) => {
     Store.find((err, stores) => {
-        if (err) {
+        if (err) 
             res.json(err);
-        }
-        else {
+        else 
             res.json(stores);
-        }
     });
 });
 
@@ -45,10 +43,10 @@ router.post('/update/:id', (req, res) => {
             store.title = req.body.title;
             store.save()
             .then(() => {
-                res.json('store update complete');
+                res.json({'message': 'store update complete', 'store_id': store._id});
             })
             .catch(() => {
-                res.status(400).send('unable to update store')
+                res.status(400).send('unable to update store');
             });
         }
     });
@@ -56,13 +54,19 @@ router.post('/update/:id', (req, res) => {
 
 router.delete('/delete/:id', (req, res) => {
     Store.findByIdAndDelete({ _id: req.params.id }, (err) => {
-        if (err) {
-            console.log(err);
+        if (err) 
             res.json(err);
-        }
-        else {
+        else 
             res.json('successfully removed store');
-        }
+    });
+});
+
+router.get('/:id', (req, res) => {
+    Store.findById({ _id: req.params.id }, (err, store) => {
+        if (err)
+            res.json(err);
+        else
+            res.json(store);
     });
 });
 

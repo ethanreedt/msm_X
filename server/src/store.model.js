@@ -5,7 +5,7 @@ const Store = new Schema({
     title: {
         type: String,
         required: true
-    }
+    },
 }, {
     collections: 'stores'
 });
